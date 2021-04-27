@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/proj10.dir/src/proj10.cpp.o  -o proj10 

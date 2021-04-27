@@ -1,0 +1,3 @@
+/home/ollie/PAs/proj10/devel/bin/proj10
+/home/ollie/PAs/proj10/devel/include/NodeStack/NodeStack.hpp
+/home/ollie/PAs/proj10/devel/include/ArrayStack/ArrayStack.hpp

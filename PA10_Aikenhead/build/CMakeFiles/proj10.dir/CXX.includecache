@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ArrayStack/ArrayStack.hpp
+iostream
+-
+
+../include/NodeStack/Node.hpp
+iostream
+-
+
+../include/NodeStack/NodeStack.hpp
+iostream
+-
+NodeStack/Node.hpp
+-
+
+/home/ollie/CS/Computer-Science-II/PA10_Aikenhead/src/proj10.cpp
+ArrayStack/ArrayStack.hpp
+-
+NodeStack/NodeStack.hpp
+-
+
