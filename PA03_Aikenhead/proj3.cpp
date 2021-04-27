@@ -1,7 +1,6 @@
 /* * * * * * * * * * * * * * *
  * Olliver Aikenhead         *
  * Project 3                 *
- * Due Feb 6th, 2020         *
  * * * * * * * * * * * * * * */
 
 #include <iostream>
@@ -11,7 +10,7 @@
 
 int main(){
 
-  // intial message for the start of the program 
+  // intial message for the start of the program
   std::cout << "\n\t============================================" << std::endl
             << "\t=== Car Agency Rental Assistance Program ===" << std::endl
             << "\t============================================"
