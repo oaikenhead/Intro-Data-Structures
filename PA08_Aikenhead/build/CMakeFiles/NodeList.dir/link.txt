@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNodeList.a  CMakeFiles/NodeList.dir/src/NodeList/NodeList.cpp.o
+/usr/bin/ranlib libNodeList.a

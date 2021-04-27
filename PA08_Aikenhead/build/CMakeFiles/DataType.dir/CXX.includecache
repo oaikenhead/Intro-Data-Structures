@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataType/DataType.h
+iostream
+-
+
+/home/ollie/CS/Computer-Science-II/PA08_Aikenhead/src/DataType/DataType.cpp
+DataType/DataType.h
+-
+cstdlib
+-
+

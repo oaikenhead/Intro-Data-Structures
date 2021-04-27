@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/proj8.dir/src/proj8.cpp.o  -o proj8  libArrayList.a libDataType.a libNodeList.a 

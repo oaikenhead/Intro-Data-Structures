@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ArrayList/ArrayList.h
+DataType/DataType.h
+-
+
+../include/DataType/DataType.h
+iostream
+-
+
+/home/ollie/CS/Computer-Science-II/PA08_Aikenhead/src/ArrayList/ArrayList.cpp
+iostream
+-
+cstring
+-
+ArrayList/ArrayList.h
+-
+

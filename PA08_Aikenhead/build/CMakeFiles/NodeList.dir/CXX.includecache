@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataType/DataType.h
+iostream
+-
+
+../include/NodeList/NodeList.h
+DataType/DataType.h
+-
+
+/home/ollie/CS/Computer-Science-II/PA08_Aikenhead/src/NodeList/NodeList.cpp
+NodeList/NodeList.h
+-
+

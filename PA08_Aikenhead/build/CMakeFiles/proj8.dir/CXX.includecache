@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ArrayList/ArrayList.h
+DataType/DataType.h
+-
+
+../include/DataType/DataType.h
+iostream
+-
+
+../include/NodeList/NodeList.h
+DataType/DataType.h
+-
+
+/home/ollie/CS/Computer-Science-II/PA08_Aikenhead/src/proj8.cpp
+iostream
+-
+ArrayList/ArrayList.h
+-
+NodeList/NodeList.h
+-
+

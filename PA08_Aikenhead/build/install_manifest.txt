@@ -1,0 +1,7 @@
+/home/ollie/PAs/proj8/devel/bin/proj8
+/home/ollie/PAs/proj8/devel/lib/static/libArrayList.a
+/home/ollie/PAs/proj8/devel/lib/static/libDataType.a
+/home/ollie/PAs/proj8/devel/lib/static/libNodeList.a
+/home/ollie/PAs/proj8/devel/include/ArrayList/ArrayList.h
+/home/ollie/PAs/proj8/devel/include/DataType/DataType.h
+/home/ollie/PAs/proj8/devel/include/NodeList/NodeList.h
