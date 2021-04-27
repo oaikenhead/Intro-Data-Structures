@@ -1,0 +1,2 @@
+/usr/bin/ar qc libVehicle.a  CMakeFiles/Vehicle.dir/src/Vehicle/Vehicle.cpp.o
+/usr/bin/ranlib libVehicle.a

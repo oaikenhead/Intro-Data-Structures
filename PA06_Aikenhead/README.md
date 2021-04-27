@@ -13,4 +13,4 @@
 > make install
 
 # run the executable
-> ./proj5
+> ./proj6

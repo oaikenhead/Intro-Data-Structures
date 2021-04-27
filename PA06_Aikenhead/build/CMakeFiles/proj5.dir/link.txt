@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic   -o proj5 libVehicle.a libCar.a 
