@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/MyString/MyString.h
+iostream
+-
+
+/home/ollie/CS/Computer-Science-II/PA07_Aikenhead/src/MyString/MyString.cpp
+iostream
+-
+cstring
+-
+MyString/MyString.h
+-
+

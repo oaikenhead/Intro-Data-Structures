@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/proj7.dir/src/proj7.cpp.o  -o proj7  libMyString.a 

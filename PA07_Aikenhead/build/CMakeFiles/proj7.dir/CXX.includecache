@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/MyString/MyString.h
+iostream
+-
+
+/home/ollie/CS/Computer-Science-II/PA07_Aikenhead/src/proj7.cpp
+iostream
+-
+MyString/MyString.h
+-
+

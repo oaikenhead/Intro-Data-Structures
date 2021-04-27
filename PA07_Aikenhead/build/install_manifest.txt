@@ -1,0 +1,3 @@
+/home/ollie/PAs/proj7/devel/bin/proj7
+/home/ollie/PAs/proj7/devel/lib/static/libMyString.a
+/home/ollie/PAs/proj7/devel/include/MyString/MyString.h
