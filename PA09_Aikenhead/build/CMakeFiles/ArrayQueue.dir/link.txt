@@ -1,0 +1,2 @@
+/usr/bin/ar qc libArrayQueue.a  CMakeFiles/ArrayQueue.dir/src/ArrayQueue/ArrayQueue.cpp.o
+/usr/bin/ranlib libArrayQueue.a

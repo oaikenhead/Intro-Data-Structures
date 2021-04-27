@@ -1,0 +1,10 @@
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/install/strip.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/install/local.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/edit_cache.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/proj9.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/NodeQueue.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/install.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/list_install_components.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/rebuild_cache.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/DataType.dir
+/home/ollie/CS/Computer-Science-II/PA09_Aikenhead/build/CMakeFiles/ArrayQueue.dir

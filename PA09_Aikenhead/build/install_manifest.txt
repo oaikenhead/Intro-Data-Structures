@@ -1,0 +1,7 @@
+/home/ollie/PAs/proj9/devel/bin/proj9
+/home/ollie/PAs/proj9/devel/lib/static/libArrayQueue.a
+/home/ollie/PAs/proj9/devel/lib/static/libDataType.a
+/home/ollie/PAs/proj9/devel/lib/static/libNodeQueue.a
+/home/ollie/PAs/proj9/devel/include/NodeQueue/NodeQueue.h
+/home/ollie/PAs/proj9/devel/include/DataType/DataType.h
+/home/ollie/PAs/proj9/devel/include/ArrayQueue/ArrayQueue.h

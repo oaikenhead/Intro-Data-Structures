@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/proj9.dir/src/proj9.cpp.o  -o proj9  libArrayQueue.a libDataType.a libNodeQueue.a 

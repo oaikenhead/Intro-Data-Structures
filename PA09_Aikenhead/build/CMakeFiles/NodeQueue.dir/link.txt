@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNodeQueue.a  CMakeFiles/NodeQueue.dir/src/NodeQueue/NodeQueue.cpp.o
+/usr/bin/ranlib libNodeQueue.a
