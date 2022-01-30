@@ -1,7 +1,8 @@
-/** 
+/**
  * Olliver Aikenhead
- * 
- * project 1; problem 1: circles
+ *
+ * project 1
+ * problem 1: circles
  */
 
 #include <stdio.h>
@@ -34,6 +35,6 @@ int main() {
   printf("The circumference of a circle is: %.3f\n", circumference);
   printf("The total area of the circles is: %.3f\n", circle_area);
   printf("The difference between the area of the rectangle and the total area of the circles is: %.3f\n", total_difference);
-  
+
   return 0;
 }
