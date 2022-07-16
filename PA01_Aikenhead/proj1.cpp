@@ -4,6 +4,8 @@
  *
  * This project is compiled using g++ in the terminal of linux.
  * Sorts a list of names from an input file, and stores them into an output file.
+ * 
+ * Adding makefile
  */
 
 #include <iostream>

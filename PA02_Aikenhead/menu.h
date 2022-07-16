@@ -1,5 +1,8 @@
 /*
- * Menu Function Declarations
+ * Header
+ * Menu Functionality
+ * 
+ * Olliver A.
  */
 
 #ifndef MENU_H_

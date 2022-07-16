@@ -3,7 +3,7 @@ HEADERS = my_string.h menu.h
 SRCS = proj2.cpp menu.cpp
 OBJECTS := $(patsubst %.cpp,%.o,$(SRCS))
 CXX = g++
-CXX_FLAGS = -Wall -std=c++03
+CXX_FLAGS = -Wall -std=c++11
 
 .PHONY: default all clean
 
