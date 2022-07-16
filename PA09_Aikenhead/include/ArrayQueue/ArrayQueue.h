@@ -14,23 +14,23 @@ const size_t ARRAY_MAX = 1000;
 
 class ArrayQueue{
 		// (i) operator<<
-		friend std::ostream & operator<<(std::ostream & os, const ArrayQueue & arrayQueue);
+		friend std::ostream &operator<<(std::ostream &os, const ArrayQueue &arrayQueue);
 
 	public:
 		// (1) Default Constructor
 		ArrayQueue();
 
 		// (2) Parametrized Constructor
-		ArrayQueue(size_t count, const DataType & value);
+		ArrayQueue(size_t count, const DataType &value);
 
 		// (3) Copy Constructor
-		ArrayQueue(const ArrayQueue & other);
+		ArrayQueue(const ArrayQueue &other);
 
 		// (4) Destructor
 		~ArrayQueue();
 
 		// (5) operator=
-		ArrayQueue & operator= (const ArrayQueue & rhs);
+		ArrayQueue & operator= (const ArrayQueue &rhs);
 
 		// (6a) front
 		DataType & front();
@@ -45,7 +45,7 @@ class ArrayQueue{
 		const DataType & back() const;
 
 		// (8) push
-		void push(const DataType & value);
+		void push(const DataType &value);
 
 		// (9) pop
 		void pop();
@@ -63,7 +63,7 @@ class ArrayQueue{
 		void clear();
 
 		// (14) serialize
-		void serialize(std::ostream & os) const;
+		void serialize(std::ostream &os) const;
 
 	private:
 		DataType m_array[ARRAY_MAX];

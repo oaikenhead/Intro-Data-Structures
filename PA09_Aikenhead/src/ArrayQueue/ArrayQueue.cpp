@@ -8,7 +8,7 @@
 #include <ArrayQueue/ArrayQueue.h>
 
 // (1) Default Constructor
-ArrayQueue::ArrayQueue(){
+ArrayQueue::ArrayQueue() {
 	m_front = 0;
 	m_back = 0;
 	m_size = 0;
@@ -18,34 +18,34 @@ ArrayQueue::ArrayQueue(){
 }
 
 // (2) Parametrized Constructor
-ArrayQueue::ArrayQueue(size_t count, const DataType & value){
+ArrayQueue::ArrayQueue(size_t count, const DataType &value) {
 	m_front = 0;
 	m_back = count;
 	m_size = count;
 
-	for(size_t i=0; i<count; i++){
+	for(size_t i=0; i<count; i++) {
 		m_array[i] = value;
 	}
 }
 
 // (3) Copy Constructor
-ArrayQueue::ArrayQueue(const ArrayQueue & other){
+ArrayQueue::ArrayQueue(const ArrayQueue & other) {
 	m_front = other.m_front;
 	m_back = other.m_back;
 	m_size = other.m_size;
 
-	for(size_t i=0; i < other.m_size; i++){
+	for(size_t i=0; i < other.m_size; i++) {
 		m_array[i] = other.m_array[i];
 	}
 }
 
 // (4) Destructor
-ArrayQueue::~ArrayQueue(){
+ArrayQueue::~ArrayQueue() {
 	clear();
 }
 
 // (5) operator=
-ArrayQueue & ArrayQueue::operator=(const ArrayQueue & rhs){
+ArrayQueue & ArrayQueue::operator=(const ArrayQueue &rhs) {
 	if(this != &rhs){
 		// empty whatever lhs has
 		clear();
@@ -55,7 +55,7 @@ ArrayQueue & ArrayQueue::operator=(const ArrayQueue & rhs){
 		m_back = rhs.m_back;
 		m_size = rhs.m_size;
 
-		for(size_t i=0; i < m_size; i++){
+		for(size_t i=0; i < m_size; i++) {
 			m_array[i] = rhs.m_array[i];
 		}
 	}
@@ -64,45 +64,45 @@ ArrayQueue & ArrayQueue::operator=(const ArrayQueue & rhs){
 }
 
 // (6a) front non const
-DataType & ArrayQueue::front(){
+DataType & ArrayQueue::front() {
 	return m_array[m_front];
 }
 
 // (6b) front const
-const DataType & ArrayQueue::front() const{
+const DataType & ArrayQueue::front() const {
 	return m_array[m_front];
 }
 
 // (7a) back non const
-DataType & ArrayQueue::back(){
+DataType & ArrayQueue::back() {
 	return m_array[m_back];
 }
 
 // (7b) back const
-const DataType & ArrayQueue::back() const{
+const DataType & ArrayQueue::back() const {
 	return m_array[m_back];
 }
 
 // (8) push
-void ArrayQueue::push(const DataType & value){
+void ArrayQueue::push(const DataType & value) {
 	m_array[m_back] = value;
 	++m_size;
 	m_back = (m_back + 1) % ARRAY_MAX;
 }
 
 // (9) pop
-void ArrayQueue::pop(){
+void ArrayQueue::pop() {
 	--m_size;
 	m_front = (m_front + 1) % ARRAY_MAX;
 }
 
 // (10) size
-size_t ArrayQueue::size() const{
+size_t ArrayQueue::size() const {
 	return m_size;
 }
 
 // (11) empty
-bool ArrayQueue::empty() const{
+bool ArrayQueue::empty() const {
 	if(m_size == 0){
 		return false;
 	}
@@ -112,7 +112,7 @@ bool ArrayQueue::empty() const{
 }
 
 // (12) full
-bool ArrayQueue::full() const{
+bool ArrayQueue::full() const {
 	if(m_size >= ARRAY_MAX){
 		return true;
 	}
@@ -122,14 +122,14 @@ bool ArrayQueue::full() const{
 }
 
 // (13) clear
-void ArrayQueue::clear(){
+void ArrayQueue::clear() {
 	m_front = 0;
 	m_back = 0;
 	m_size = 0;
 }
 
 // (14) serialize
-void ArrayQueue::serialize(std::ostream & os) const{
+void ArrayQueue::serialize(std::ostream &os) const {
 	for(size_t i=0; i < m_size; i++){
 		os << "AQ" << i << ": " << m_array[i + m_front];
 
@@ -141,7 +141,7 @@ void ArrayQueue::serialize(std::ostream & os) const{
 
 
 // (i) operator <<
-std::ostream & operator<<(std::ostream & os, const ArrayQueue & arrayQueue){
+std::ostream & operator<<(std::ostream &os, const ArrayQueue &arrayQueue) {
 	arrayQueue.serialize(os);
 	return os;
 }
