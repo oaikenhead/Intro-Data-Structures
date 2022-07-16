@@ -1,3 +1,4 @@
-/home/ollie/PAs/proj10/devel/bin/proj10
-/home/ollie/PAs/proj10/devel/include/NodeStack/NodeStack.hpp
-/home/ollie/PAs/proj10/devel/include/ArrayStack/ArrayStack.hpp
+/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/devel/bin/proj10
+/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/devel/include/NodeStack/Node.hpp
+/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/devel/include/NodeStack/NodeStack.hpp
+/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/devel/include/ArrayStack/ArrayStack.hpp

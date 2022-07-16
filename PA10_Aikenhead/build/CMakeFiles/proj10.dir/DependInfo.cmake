@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ollie/CS/Computer-Science-II/PA10_Aikenhead/src/proj10.cpp" "/home/ollie/CS/Computer-Science-II/PA10_Aikenhead/build/CMakeFiles/proj10.dir/src/proj10.cpp.o"
+  "/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/src/proj10.cpp" "/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/build/CMakeFiles/proj10.dir/src/proj10.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

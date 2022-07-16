@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ollie/CS/Computer-Science-II/PA10_Aikenhead/include 
+CXX_INCLUDES = -I/home/sb/Projects/GitDirs/Intro-Data-Structures/PA10_Aikenhead/include 
 

@@ -10,21 +10,20 @@
 
  #include <iostream>
 
- const size_t ARRAY_CAPACITY = 1000;
+ const size_t ARRAY_SIZE = 1000;
 
  template <typename T>
  class ArrayStack{
- 		// (i) operator <<
- 		template <typename U>
- 		friend std::ostream & operator<<(std::ostream & os, const ArrayStack<U> & arrayStack);
- 	public:
+ 	// (i) operator <<
+ 	template <typename U>
+ 	friend std::ostream & operator<<(std::ostream &os, const ArrayStack<U> &arrayStack);
+ 	
+	public:
  		// (1) default ctor
- 		ArrayStack(){
- 			m_top = 0;
- 		}
+ 		ArrayStack(){ m_top = 0; }
 
  		// (2) param ctor
- 		ArrayStack(size_t count, const T & value){
+ 		ArrayStack(size_t count, const T &value){
  			m_top = 0;
 
  			for(size_t i=0; i < count; i++){
@@ -33,24 +32,22 @@
  		}
 
  		// (3) copy ctor
- 		ArrayStack(const ArrayStack & other){
+ 		ArrayStack(const ArrayStack &other) {
  			size_t check = other.size();
  			m_top = 0;
 
- 			for(size_t i=0; i < check; i++){
+ 			for(size_t i=0; i < check; i++) {
  				push(other.m_container[i]);
  			}
  		}
 
  		// (4) dtor
- 		~ArrayStack(){
-
- 		}
+ 		~ArrayStack(){ }
 
  		// (5) operator =
- 		ArrayStack & operator=(const ArrayStack & rhs){
+ 		ArrayStack &operator=(const ArrayStack &rhs){
  			if(this != &rhs){
- 				// clear whatever is there
+ 				// clear data
  				clear();
 
  				size_t check = rhs.size();
@@ -63,16 +60,12 @@
  		}
 
  		// (6) top
- 		T & top(){
- 			return m_container[m_top-1];
- 		}
+ 		T &top(){ return m_container[m_top-1]; }
 
- 		const T & top() const{
- 			return m_container[m_top-1];
- 		}
+ 		const T &top() const{ return m_container[m_top-1]; }
 
  		// (7) push
- 		void push(const T & value){
+ 		void push(const T &value){
  			if(!full()){
  				m_container[m_top++] = value;
  			}
@@ -86,27 +79,19 @@
  		}
 
  		// (9) size
- 		size_t size() const{
- 			return m_top;
- 		}
+ 		size_t size() const{ return m_top; }
 
  		// (10) empty
- 		bool empty() const{
- 			return m_top == 0;
- 		}
+ 		bool empty() const{ return m_top == 0; }
 
  		// (11) full
- 		bool full() const{
- 			return size() >= ARRAY_CAPACITY;
- 		}
+ 		bool full() const{ return size() >= ARRAY_SIZE; }
 
  		// (12) clear
- 		void clear(){
- 			m_top = 0;
- 		}
+ 		void clear(){ m_top = 0; }
 
  		// (13) serialize
- 		void serialize(std::ostream & os) const{
+ 		void serialize(std::ostream &os) const{
  			size_t c_size = size();
 
  			for(int i=c_size-1; i >= 0; i--){
@@ -119,12 +104,12 @@
  		}
 
  	private:
- 		T m_container[ARRAY_CAPACITY];
+ 		T m_container[ARRAY_SIZE];
  		size_t m_top;
  };
 
  template <typename U>
- std::ostream & operator<<(std::ostream & os, const ArrayStack<U> & arrayStack){
+ std::ostream & operator<<(std::ostream &os, const ArrayStack<U> &arrayStack){
  	arrayStack.serialize(os);
  	return os;
  }
