@@ -1,5 +1,5 @@
 /**
- * @brief  CS-202 NodeStack class Implementation
+ * @brief  CS202 NodeStack class Implementation
  * @author Olliver Aikenhead
  *
  * This file is the the implementation of the NodeStack class for CS-202.
@@ -15,64 +15,62 @@
  class NodeStack{
 
  	template <typename U>
- 	friend std::ostream & operator<<(std::ostream & os, const NodeStack<U> & NodeStack);
+ 	friend std::ostream &operator<<(std::ostream &os, const NodeStack<U> &NodeStack);
 
  	public:
  		// (1) default ctor
- 		NodeStack(){
+ 		NodeStack() {
  			m_top = NULL;
  		}
 
  		// (2) param ctor
- 		NodeStack(size_t count, const T & value){
+ 		NodeStack(size_t count, const T &value ){
  			m_top = new Node<T>(value);
- 			Node<T> * rhs = m_top;
+ 			Node<T>* rhs = m_top;
 
- 			for(size_t i=1; i < count; i++){
- 				rhs -> m_next = new Node<T>(value);
- 				rhs = rhs -> m_next;
+ 			for(size_t i=1; i < count; i++) {
+ 				rhs->m_next = new Node<T>(value);
+ 				rhs = rhs->m_next;
  			}
  		}
 
  		// (3) copy ctor
- 		NodeStack(const NodeStack & other){
- 			Node<T> * curr_val;
+ 		NodeStack(const NodeStack &other) {
+ 			Node<T>* curr_val;
  			size_t check = other.size();
  			m_top = NULL;
 
- 			while(check){
+ 			while(check) {
  				curr_val = other.m_top;
- 				for(size_t i=0; i < check-1; i++){
+ 				for(size_t i=0; i < check-1; i++) {
  					curr_val = curr_val -> m_next;
  				}
 
- 				push(curr_val -> data());
+ 				push(curr_val->data());
  				check--;
  			}
  		}
 
- 		// (4) dtor
- 		~NodeStack(){
-
- 		}
+ 		// (4) destructor 
+ 		~NodeStack(){ }
 
  		// (5) operator=
- 		NodeStack & operator=(const NodeStack & rhs){
- 			if(this != &rhs){
+ 		NodeStack &operator=(const NodeStack &rhs) {
+ 			if(this != &rhs) {
  				// clear whatever is there
  				clear();
 
- 				Node<T> * curr_val;
+ 				Node<T>* curr_val;
  				size_t check = rhs.size();
  				m_top = NULL;
 
- 				while(check){
+ 				while(check) {
  					curr_val = rhs.m_top;
- 					for(int i=0; i < check - 1; i++){
- 						curr_val = curr_val -> m_next;
+ 					for(int i=0; i < check-1; i++){
+ 						curr_val = curr_val->m_next;
  					}
 
- 					push(curr_val -> data());
+ 					push(curr_val->data());
  					check--;
  				}
  			}
@@ -80,42 +78,42 @@
  		}
 
  		// (6) top
- 		T & top(){
- 			return m_top -> data();
+ 		T &top(){
+ 			return m_top->data();
  		}
 
- 		const T & top() const{
- 			return m_top -> data();
+ 		const T &top() const {
+ 			return m_top->data();
  		}
 
  		// (7) push
- 		void push(const T & value){
- 			if(empty()){
+ 		void push(const T &value) {
+ 			if(empty()) {
  				m_top = new Node<T>(value);
  			}
- 			else{
+ 			else {
  				m_top = new Node<T>(value, m_top);
  			}
  		}
 
  		// (8) pop
- 		void pop(){
+ 		void pop( ){
  			// if this is not empty pop off the value on top
- 			if(!empty()){
- 				Node<T> * curr_val = m_top;
- 				m_top = m_top -> m_next;
+ 			if(!empty()) {
+ 				Node<T>* curr_val = m_top;
+ 				m_top = m_top->m_next;
  				delete curr_val;
  			}
  		}
 
  		// (9) size
- 		size_t size() const{
+ 		size_t size() const {
  			// setting current value
- 			Node<T> * curr_val = m_top;
+ 			Node<T>* curr_val = m_top;
  			size_t check = 0;
 
  			// while on the current value check increases and moves the value
- 			while(curr_val){
+ 			while(curr_val) {
  				check++;
  				curr_val = curr_val -> m_next;
  			}
@@ -124,53 +122,54 @@
  		}
 
  		// (10) empty
- 		bool empty() const{
+ 		bool empty() const {
  			return m_top == NULL;
  		}
 
  		// (11) full
- 		bool full() const{
+ 		bool full() const {
  			return false;
  		}
 
  		// (12) clear
- 		void clear(){
+ 		void clear() {
  			// setting top to current value
- 			Node<T> * curr_val = m_top;
+ 			Node<T>* curr_val = m_top;
 
- 			while(curr_val){
+ 			while(curr_val) {
  				// taking off the top of the set of values and moving next
  				pop();
- 				curr_val = curr_val -> m_next;
+ 				curr_val = curr_val->m_next;
  			}
  		}
 
  		// (13) serialize
- 		void serialize(std::ostream & os) const{
+ 		void serialize(std::ostream &os) const {
  			// creating pointer that points to top
- 			Node<T> * curr_val = m_top;
- 			size_t i = size() - 1;
+ 			Node<T>* curr_val = m_top;
+ 			size_t i = size()-1;
 
  			while(curr_val){
- 				os << curr_val -> data();
+ 				os << curr_val->data();
 
- 				if(curr_val -> m_next){
+ 				if(curr_val->m_next){
  					os << std::endl;
  				}
 
  				// moving the current value
- 				curr_val = curr_val -> m_next;
+ 				curr_val = curr_val->m_next;
  				i--;
  			}
  		}
 
  	private:
- 		Node<T> * m_top;
+ 		Node<T>* m_top;
 
  };
 
+// friend function
  template <typename T>
- std::ostream & operator<<(std::ostream & os, const NodeStack<T> & nodeStack){
+ std::ostream &operator<<(std::ostream &os, const NodeStack<T> &nodeStack){
  	nodeStack.serialize(os);
  	return os;
  }

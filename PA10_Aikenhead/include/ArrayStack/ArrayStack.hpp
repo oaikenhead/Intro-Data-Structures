@@ -1,5 +1,5 @@
 /**
- * @brief  CS-202 ArrayStack class Implementation
+ * @brief  CS202 ArrayStack Class Implementation - C++11
  * @author Olliver Aikenhead
  *
  * This file is the the implementation of the ArrayStack class for CS-202.

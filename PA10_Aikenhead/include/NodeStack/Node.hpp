@@ -1,8 +1,8 @@
 /**
- * @brief  CS-202 Node class Implementation
+ * @brief  CS202 Node Class Implementation
  * @author Olliver Aikenhead
  *
- * This file is the the implementation of the Node class for CS-202.
+ * A templated node implementation, using T for class Template name
  */
 
 #ifndef NODE_H_
@@ -19,27 +19,27 @@ class Node{
 
  public:
    Node() :
-     m_next( NULL )
+     m_next(NULL)
    {
    }
 
-   Node(const T & data, Node<T>* next = nullptr) : 
-     m_next( next ),
-     m_data( data )
+   Node(const T &data, Node<T>* next = nullptr) : 
+     m_next(next),
+     m_data(data)
    {
    }
 
-   Node(const Node<T> & other) :
-     m_next( other.m_next ),
-     m_data( other.m_data )
+   Node(const Node<T> &other) :
+     m_next(other.m_next),
+     m_data(other.m_data)
    {
    }
 
-   T & data(){
+   T &data(){
      return m_data;
    }
 
-   const T & data() const{
+   const T &data() const{
      return m_data;
    }
 
