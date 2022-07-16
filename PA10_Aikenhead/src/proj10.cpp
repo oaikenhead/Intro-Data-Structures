@@ -1,8 +1,8 @@
 /**
- * @brief  CS-202 Main Project File
+ * @brief  CS202 Main Function
  * @author Olliver Aikenhead
  *
- * This file is the the main file that contains int main.
+ * This file compiles into the main executable
  */
 
  #include <ArrayStack/ArrayStack.hpp>
@@ -10,23 +10,23 @@
 
  using namespace std;
 
- int main(){
+ int main() {
 
  	// Default Ctor Tests
  	cout << "\n\t*************************************"
- 			 << "\n\t***** ARRAYSTACK FUNCTION TESTS *****"
- 			 << "\n\t*************************************"
- 			 << endl << endl;
+ 		 << "\n\t***** ARRAYSTACK FUNCTION TESTS *****"
+ 		 << "\n\t*************************************"
+ 		 << endl << endl;
  	cout << "ArrayStack Default-Ctor:" << endl;
- 	ArrayStack<int> as_def1;
- 	ArrayStack<double> as_def2;
- 	cout << as_def1 << endl;
- 	cout << as_def2 << endl;
+ 	ArrayStack<int> as_default1;
+ 	ArrayStack<double> as_default2;
+ 	cout << as_default1 << endl;
+ 	cout << as_default2 << endl;
 
  	// Param Ctor Tests
  	cout << "ArrayStack Parametrized-Ctor:" << endl;
  	ArrayStack<int> as_param1(2, 44);
- 	ArrayStack<double> as_param2(3, 77.7);
+ 	ArrayStack<double> as_param2(2, 77.7);
  	cout << as_param1 << endl;
  	cout << as_param2 << endl << endl;
 
@@ -45,6 +45,8 @@
  	cout << as_ao2 << endl << endl;
 
  	// Push Test
+	// pushing 27 on top of as_ao1
+	// pushing 33.3 on top of as_ao2
  	cout << "ArrayStack Push:" << endl;
  	as_ao1.push(27);
  	as_ao2.push(33.3);
@@ -52,6 +54,7 @@
  	cout << as_ao2 << endl << endl;
 
  	// Pop Test
+	// popping number from top of stack
  	cout << "ArrayStack Pop:" << endl;
  	as_ao1.pop();
  	as_ao2.pop();
@@ -62,9 +65,9 @@
 
  	// NodeStack Testing
  	cout << "\t************************************"
- 			 << "\n\t***** NODESTACK FUNCTION TESTS *****"
- 			 << "\n\t************************************"
- 			 << endl << endl;
+ 		 << "\n\t***** NODESTACK FUNCTION TESTS *****"
+ 		 << "\n\t************************************"
+ 		 << endl << endl;
 
  	cout << "NodeStack Default-Ctor:" << endl;
  	NodeStack<int> ns_def1;
@@ -75,7 +78,7 @@
  	// Param Ctor Tests
  	cout << "NodeStack Parametrized-Ctor:" << endl;
  	NodeStack<int> ns_param1(2, 55);
- 	NodeStack<double> ns_param2(3, 4.4);
+ 	NodeStack<double> ns_param2(2, 4.4);
  	cout << ns_param1 << endl;
  	cout << ns_param2 << endl << endl;
 
@@ -108,10 +111,9 @@
  	cout << ns_ao2 << endl << endl;
 
  	cout << "\t*************************************"
- 			 << "\n\t*****     TESTING COMPLETED     *****"
- 			 << "\n\t*************************************"
- 			 << endl << endl;
-
+ 		 << "\n\t*****     TESTING COMPLETED     *****"
+ 		 << "\n\t*************************************"
+ 		 << endl << endl;
 
  	return 0;
  }

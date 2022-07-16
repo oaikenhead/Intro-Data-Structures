@@ -1,5 +1,5 @@
 /**
- * @brief  CS-202 ArrayStack class Implementation
+ * @brief  CS202 ArrayStack Class Implementation - C++11
  * @author Olliver Aikenhead
  *
  * This file is the the implementation of the ArrayStack class for CS-202.
@@ -23,10 +23,10 @@
  		ArrayStack(){ m_top = 0; }
 
  		// (2) param ctor
- 		ArrayStack(size_t count, const T &value){
+ 		ArrayStack(size_t count, const T &value) {
  			m_top = 0;
 
- 			for(size_t i=0; i < count; i++){
+ 			for(size_t i=0; i < count; i++) {
  				push(value);
  			}
  		}
@@ -45,14 +45,14 @@
  		~ArrayStack(){ }
 
  		// (5) operator =
- 		ArrayStack &operator=(const ArrayStack &rhs){
+ 		ArrayStack &operator=(const ArrayStack &rhs) {
  			if(this != &rhs){
  				// clear data
  				clear();
 
  				size_t check = rhs.size();
 
- 				for(size_t i=0; i < check; i++){
+ 				for(size_t i=0; i < check; i++) {
  					push(rhs.m_container[i]);
  				}
  			}
@@ -65,15 +65,15 @@
  		const T &top() const{ return m_container[m_top-1]; }
 
  		// (7) push
- 		void push(const T &value){
+ 		void push(const T &value) {
  			if(!full()){
  				m_container[m_top++] = value;
  			}
  		}
 
  		// (8) pop
- 		void pop(){
- 			if(!empty()){
+ 		void pop() {
+ 			if(!empty()) {
  				m_top--;
  			}
  		}
@@ -91,10 +91,10 @@
  		void clear(){ m_top = 0; }
 
  		// (13) serialize
- 		void serialize(std::ostream &os) const{
+ 		void serialize(std::ostream &os) const {
  			size_t c_size = size();
 
- 			for(int i=c_size-1; i >= 0; i--){
+ 			for(int i=c_size-1; i >= 0; i--) {
  				os << m_container[i];
 
  				if(i>0){
@@ -109,7 +109,7 @@
  };
 
  template <typename U>
- std::ostream & operator<<(std::ostream &os, const ArrayStack<U> &arrayStack){
+ std::ostream & operator<<(std::ostream &os, const ArrayStack<U> &arrayStack) {
  	arrayStack.serialize(os);
  	return os;
  }
